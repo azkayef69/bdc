@@ -11,7 +11,7 @@ except ModuleNotFoundError:
     os.system('pip install mechanize requests futures==2 > /dev/null')
     os.system('python Kashif.py')
 from bs4 import BeautifulSoup
-ugen = []
+ugen =['Mozilla/5.0 (Linux; Android 8.1.0; V1818A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.74 Mobile Safari/537.36','Mozilla/5.0 (Linux; arm_64; Android 8.1.0; CPH1903) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 YaApp_Android/21.111.1 YaSearchBrowser/21.111.1 BroPP/1.0 SA/3 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.1.0; LM-Q710(FGN) Build/OPM1.171019.019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/96.0.4664.45 Mobile Safari/537.36 GoogleApp/12.44.23.23.arm',"Mozilla/5.0 (Linux; Android 8.1.0; vivo 1812 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36 VivoBrowser/7.9.0.1"]
 A = '\x1b[1;97m' 
 B = '\x1b[1;96m' 
 C = '\x1b[1;91m' 
@@ -50,7 +50,7 @@ try:
 except:
     pass
 sock=open('ua.html','r').read().splitlines()
-def uaku():
+"""def uaku():
     try:
         ua=open('bbnew.txt','r').read().splitlines()
         for ub in ua:
@@ -61,7 +61,7 @@ def uaku():
         aa=re.findall('line">(.*?)<',str(a))
         for un in aa:
             ua.write(un+'\n')
-        ua=open('.user-agents.txt','r').read().splitlines()
+        ua=open('.user-agents.txt','r').read().splitlines()"""
 loop = 0
 cps = []
 oks = []
@@ -172,8 +172,9 @@ def Random():
     print(f"          \x1b[97m[\033[37;41m  L I M I T   M E N U   \033[0;m]")
     print(f"")
     limit = int(input(' EXAMPLE: 1000, 2000, 5000, 10000\n\n PUT CLONING LIMIT: '))
+    
     for nmbr in range(limit):
-        nmp = ''.join(random.choice(string.digits) for _ in range(7))
+        nmp = ''.join(random.choice(string.digits) for _ in range(11-len(code)))
         user.append(nmp)
     with ThreadPool(max_workers=30) as yaari:    
         clear()
