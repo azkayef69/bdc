@@ -187,11 +187,7 @@ def Random():
         print(f" {WHITE}TO STOP PROCESS Ctrl + Z ")
         print(f'===========================================================')
         for love in user:
-            uid = code+love
-            pwx = [love[1:]]
-            print(uid,pwx)
-            yaari.submit(free,uid,pwx,tl)
-def free(uid,pwx,tl):
+            pwx = [uid[(11-n):] for n in range(6,12)]
     global loop
     global oks
     global agents
